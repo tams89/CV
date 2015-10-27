@@ -51,7 +51,7 @@
                     <nav>
                         <ul class="pager">
                             <li>
-                                <a href="https://uk.linkedin.com/in/tameshsivaguru" title="Social Linkedin" class="animated rotateIn"><i class="fa fa-linkedin"></i></a>
+                                <a href="https://uk.linkedin.com/in/tameshsivaguru" title="Social Linkedin" class="animated rotateIn" style="background-color: #2791EC"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </nav><!--/ social nav -->
@@ -109,7 +109,7 @@
                                             <div class="pull-left">
                                                 <span class="fa fa-map-marker bg-primary text-primary animated rotateIn"></span>
                                             </div>
-                                            <div class="media-body animated fadeInRight">Dunstable, Befordshire, England</div>
+                                            <div class="media-body animated fadeInRight">Befordshire, England (Pf. London)</div>
                                         </article>
                                     </div>
                                 </div>
@@ -257,25 +257,30 @@
                             <!-- experiences -->
                             <section class="panel-group resume margin-bottom" id="experience">
                                 <h2>Experiences</h2>
-                                <p class="margin-bottom"><small>A brief history</small></p>
+                                <p class="margin-bottom"><small>A brief history. (click + to expand)</small></p>
                                 <!-- ex1 -->
                                 <article class="resume-item">
                                     <div class="resume-year"><small>June 2015 - October 2015</small></div>
                                     <div class="resume-btn">
-                                        <a href="#ex1" data-toggle="collapse" data-parent="#experience"></a>
+                                        <a href="#ex1" data-toggle="collapse" class="collapsed" data-parent="#experience"></a>
                                     </div>
 
                                     <div class="panel">
                                         <div class="panel-heading">
                                             <div class="panel-title">
                                                 <h4 class="resume-title">Pershing, A BNY Mellon Company</h4>
-                                                <p class="text-secondary"> / Senior Associate / Lead Developer</p>
+                                                <p class="text-secondary">/ Senior Associate / Lead Developer</p>
                                             </div>
                                         </div>
-                                        <div id="ex1" class="panel-collapse collapse in">
+                                        <div id="ex1" class="panel-collapse collapse out">
                                             <div class="panel-body text-grey">
                                                 <p>
-                                                    At Pershing. I came into the Trading & Settlements team as the most senior developer regarding the dotNET framework. Initially, whilst being trained in business concepts around trading systems, I refactored a large behaviour driven testing framework based on the SpecFlow framework. To aid in this effort I introduced Inversion of Control / Dependency Injection concepts; by diving into the companies open-source software approval process and seeking approval for StructureMap and CommonServiceLocator. These tools allowed me to refactor the solution into isolated components and also reduce the amount of code in the solution by around 50%.
+                                                    At Pershing. I came into the Trading & Settlements team as the most senior developer regarding the dotNET framework.
+                                                    <br />
+                                                    <br />
+                                                    Initially, whilst being trained in business concepts around trading systems, I refactored a large behaviour driven testing framework based on the SpecFlow framework. To aid in this effort I introduced Inversion of Control / Dependency Injection concepts; by diving into the companies open-source software approval process and seeking approval for StructureMap and CommonServiceLocator. These tools allowed me to refactor the solution into isolated components and also reduce the amount of code in the solution by around 50%.
+                                                    <br />
+                                                    <br />
                                                     I worked on a file monitoring application which moves and copies trade information from external clients. This is a multi-threaded application and after an environment change (service in a new location), network latency was causing threads to ever increase without being released causing eventual termination of the program. To remedy this I dug into the solution which was in VB.NET (which we converted to C# with an automated tool and verified by running the present unit tests). I performed a number of tests in various locations and concluded that the threading model used was not appropriate and so altered the thread creation and maintenance logic from using the ThreadPool to manual threads that are managed with custom timers. This increased the IO on the server slightly but was extremely resilient to latency issues as a result; which we stress tested by programmatically dumping thousands of files.
                                                 </p>
                                                 <p>
@@ -289,13 +294,13 @@
                                 <article class="resume-item">
                                     <div class="resume-year"><small>March 2014 - May 2015</small></div>
                                     <div class="resume-btn">
-                                        <a href="#ex2" data-toggle="collapse" data-parent="#experience"></a>
+                                        <a href="#ex2" data-toggle="collapse" class="collapsed" data-parent="#experience"></a>
                                     </div>
                                     <div class="panel">
                                         <div class="panel-heading">
                                             <div class="panel-title">
                                                 <h4 class="resume-title">Lloyds Banking Group</h4>
-                                                <p class="text-secondary"> / Manager / Senior Developer</p>
+                                                <p class="text-secondary">/ Manager / Senior Developer</p>
                                             </div>
                                         </div>
                                         <div id="ex2" class="panel-collapse collapse out">
@@ -306,6 +311,8 @@
                                                     Once the analysis had been completed and the timelines established, I went on to architect the system. ASP.NET MVC in C# was used as the backend framework alongside Entity Framework 6 (ORM). The entire application was built using Inversion of Control principles (using Microsoft's Unity container to achieve this) so that we could easily test and build upon the code. The front-end of the system used HTML, CSS, JavaScript (in the form of JQuery, Kendo UI for complex Grids containing hierarchical data and multiple filters, TypeScript was used where OO JavaScript code which became required when writing client side calculations).
                                                     The database was initially built by Entity Framework using a code first approach, however as the databases complexity grew we switched to database first and reverse-engineered the database in to SQL Project (which is an automated process). We removed Entity Framework at this point as with SQL Server 2005 it was not producing particularly efficient queries, we introduced T4 generated stored procedures instead and this provided the desired performance. As the solution was built using IoC throughout it was a relatively pain-less process to remove Entity Framework.
                                                     Testing was done in a BDD manner using NUnit to write integration & unit tests that probed the behaviour and core functionality of the system. I.e. BDD was useful for testing end-to-end user processes, where-as unit tests were useful to test finer grained logic like calculations based on formulas.
+                                                    <br />
+                                                    <br />
                                                     I was the lead developer on the project with two contactors working alongside me and a junior developer some of the time. I managed the development tasks and provided mentoring where we had differing skill-sets.
                                                     This system was built as a showcase to replace a number of disparate systems throughout the bank which would help various departments work more efficiently and more uniformly.
                                                 </p>
@@ -320,13 +327,13 @@
                                 <article class="resume-item">
                                     <div class="resume-year"><small>May 2012 - January 2014</small></div>
                                     <div class="resume-btn">
-                                        <a href="#ex3" data-toggle="collapse" data-parent="#experience"></a>
+                                        <a href="#ex3" data-toggle="collapse" class="collapsed" data-parent="#experience"></a>
                                     </div>
                                     <div class="panel">
                                         <div class="panel-heading">
                                             <div class="panel-title">
                                                 <h4 class="resume-title">East Sussex County Council / FDM Group Consultant</h4>
-                                                <p class="text-secondary"> / IT Consultant</p>
+                                                <p class="text-secondary">/ IT Consultant</p>
                                             </div>
                                         </div>
                                         <div id="ex3" class="panel-collapse collapse out">
@@ -345,15 +352,15 @@
                                 </article><!--/ ex3 -->
                                 <!-- ex4 -->
                                 <article class="resume-item">
-                                    <div class="resume-year"><small>2009 - 2010</small></div>
+                                    <div class="resume-year"><small>August 2009 - August 2010</small></div>
                                     <div class="resume-btn">
-                                        <a href="#ex4" data-toggle="collapse" data-parent="#experience"></a>
+                                        <a href="#ex4" data-toggle="collapse" class="collapsed" data-parent="#experience"></a>
                                     </div>
                                     <div class="panel">
                                         <div class="panel-heading">
                                             <div class="panel-title">
                                                 <h4 class="resume-title">Royal Surrey County Hospital</h4>
-                                                <p class="text-secondary"> / Student Medical Physicist</p>
+                                                <p class="text-secondary">/ Student Medical Physicist</p>
                                             </div>
                                         </div>
                                         <div id="ex4" class="panel-collapse collapse out-">
@@ -369,50 +376,73 @@
                             <!-- education -->
                             <section class="panel-group resume margin-bottom" id="education">
                                 <h2>Education</h2>
-                                <br/>
+                                <p class="margin-bottom"><small>Summary. (click + to expand)</small></p>
 
                                 <article class="resume-item">
-                                    <div class="resume-year"><small>2015 - 2011</small>
-                                    </div>
+                                    <div class="resume-year"><small>September 2007 - June 2011</small></div>
                                     <div class="resume-btn">
-                                        <a href="#ed1" data-toggle="collapse" data-parent="#education"></a>
+                                        <a href="#ed1" data-toggle="collapse" class="collapsed" data-parent="#education"></a>
                                     </div>
                                     <div class="panel">
                                         <div class="panel-heading">
                                             <div class="panel-title">
                                                 <h4 class="resume-title">University of Surrey</h4>
-                                                <p class="text-secondary"> / BSc - Physics with Nuclear Astrophysics</p>
+                                                <br/>
+                                                <p class="text-secondary">BSc - Physics with Nuclear Astrophysics</p>
+                                            </div>
+                                        </div>
+                                        <div id="ed1" class="panel-collapse collapse out">
+                                            <div class="panel-body text-grey">
+                                                <br />
+                                                <br />
+                                                Modules included: High Energy Physics, Nuclear Astrophysics, <strong>Financial Derivatives</strong>, Labs (classical & modern), Soft Matter, Light & Matter, Modern Analytical Techniques, Nuclear Structure & Reactions, Physics of Stars, Statistical Physics, Radiation Detection& Measurement, Quantum Physics, Solid State Physics, and more.
                                             </div>
                                         </div>
                                     </div>
                                 </article>
 
                                 <article class="resume-item">
-                                    <div class="resume-year"><small>2015 - 2015</small></div>
+                                    <div class="resume-year"><small>January 2015 - March 2015</small></div>
                                     <div class="resume-btn">
-                                        <a href="#ed2" data-toggle="collapse" data-parent="#education"></a>
+                                        <a href="#ed2" data-toggle="collapse" class="collapsed" data-parent="#education"></a>
                                     </div>
                                     <div class="panel">
                                         <div class="panel-heading">
                                             <div class="panel-title">
                                                 <h4 class="resume-title">Massachusetts Institute of Technology / edX</h4>
-                                                <p class="text-secondary"> / 6.00.1x, Introduction to Computer Science and Programming Using Python</p>
+                                                <br />
+                                                <p class="text-secondary">6.00.1x, Introduction to Computer Science and Programming Using Python</p>
+                                            </div>
+                                        </div>
+                                        <div id="ed2" class="panel-collapse collapse out">
+                                            <div class="panel-body text-grey">
+                                                <br />
+                                                <br />
+                                                <img src="images/6.00.01x.png" alt="6.00.01X"/>
                                             </div>
                                         </div>
                                     </div>
                                 </article>
 
                                 <article class="resume-item">
-                                    <div class="resume-year"><small>2015 - 2015</small>
+                                    <div class="resume-year"><small>March 2015 - May 2015</small>
                                     </div>
                                     <div class="resume-btn">
-                                        <a href="#ed3" data-toggle="collapse" data-parent="#education"></a>
+                                        <a href="#ed3" data-toggle="collapse" class="collapsed" data-parent="#education"></a>
                                     </div>
                                     <div class="panel">
                                         <div class="panel-heading">
                                             <div class="panel-title">
                                                 <h4 class="resume-title">Massachusetts Institute of Technology / edX</h4>
-                                                <p class="text-secondary"> / edX Certification - 6.00.2x: Introduction to Computational Thinking and Data Science</p>
+                                                <br/>
+                                                <p class="text-secondary">6.00.2x: Introduction to Computational Thinking and Data Science</p>
+                                            </div>
+                                        </div>
+                                        <div id="ed3" class="panel-collapse collapse out">
+                                            <div class="panel-body text-grey">
+                                                <br />
+                                                <br />
+                                                <img src="images/6.00.2x.png" alt="6.00.2X"/>
                                             </div>
                                         </div>
                                     </div>
@@ -420,16 +450,24 @@
 
                                 <article class="resume-item">
                                     <div class="resume-year">
-                                        <small>2015 - 2015</small>
+                                        <small>Febuary 2015 - May 2015</small>
                                     </div>
                                     <div class="resume-btn">
-                                        <a href="#ed4" data-toggle="collapse" data-parent="#education"></a>
+                                        <a href="#ed4" data-toggle="collapse" class="collapsed" data-parent="#education"></a>
                                     </div>
                                     <div class="panel">
                                         <div class="panel-heading">
                                             <div class="panel-title">
                                                 <h4 class="resume-title">University of California, Berkeley / edX</h4>
-                                                <p class="text-secondary"> / edX Certification - BerkeleyX: CS188.1x Artificial Intelligence</p>
+                                                <br/>
+                                                <p class="text-secondary">BerkeleyX: CS188.1x Artificial Intelligence</p>
+                                            </div>
+                                        </div>
+                                        <div id="ed4" class="panel-collapse collapse out">
+                                            <div class="panel-body text-grey">
+                                                <br />
+                                                <br />
+                                                <img src="images/cs188x.1x.png" alt="Cs188x.1X"/>
                                             </div>
                                         </div>
                                     </div>
@@ -438,7 +476,7 @@
                             </section><!--/ education -->
                         </div><!--/ padding -->
                         <footer class="visible-xs">
-                            <p class="text-center"><small>Tamesh Sivaguru&copy;2015 <span class="text-secondary">Software Engineer</span></small></p>
+                            <p class="text-center"><small>Tamesh Sivaguru &copy; 2015 <span class="text-secondary">Software Engineer</span></small></p>
                         </footer>
                     </div><!--/ col-9 -->
                 </section><!--/ wrapper section -->
