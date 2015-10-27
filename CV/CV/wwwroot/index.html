@@ -51,10 +51,7 @@
                     <nav>
                         <ul class="pager">
                             <li>
-                                <a href="#" title="Social GitHub" class="animated rotateIn"><i class="fa fa"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" title="Social Linkedin" class="animated rotateIn"><i class="fa fa-linkedin"></i></a>
+                                <a href="https://www.linkedin.com/pub/tamesh-sivaguru/2b/827/94a" title="Social Linkedin" class="animated rotateIn"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </nav><!--/ social nav -->
@@ -82,10 +79,10 @@
                                         <p class="lead text-center">
                                             <i class="fa fa-level-down"></i>
                                         </p>
-                                        <a href="#" class="btn btn-lg btn-block btn-default">
+                                        <a href="cv/tamesh sivaguru cv.pdf" class="btn btn-lg btn-block btn-default">
                                             <i class="fa fa-file-text-o"></i>&nbsp; Resume PDF
                                         </a>
-                                        <a href="#" class="btn btn-lg btn-block btn-default">
+                                        <a href="cv/tamesh sivaguru cv.docx" class="btn btn-lg btn-block btn-default">
                                             <i class="fa fa-file-text-o"></i>&nbsp; Resume Word
                                         </a>
                                     </div>
@@ -120,7 +117,7 @@
                             <!-- skill -->
                             <section class="margin-bottom" id="skills">
                                 <h2>Skills</h2>
-                                <p class="margin-bottom"><small>Core skills, see PDF/Word CV for more detail.</small></p>
+                                <p class="margin-bottom"><small>Core skills, see PDF/Word CV for all skills.</small></p>
                                 <div class="row">
                                     <!--lenguajes block-->
                                     <div class="col-lg-6 margin-bottom">
@@ -271,15 +268,18 @@
                                     <div class="panel">
                                         <div class="panel-heading">
                                             <div class="panel-title">
-                                                <h4 class="resume-title">Pershing, A BNY Mellon Company.</h4>
+                                                <h4 class="resume-title">Pershing, A BNY Mellon Company</h4>
                                                 <p class="text-secondary"> / Senior Associate / Lead Developer</p>
                                             </div>
                                         </div>
                                         <div id="ex1" class="panel-collapse collapse in">
                                             <div class="panel-body text-grey">
                                                 <p>
-                                                    <!--TODO-->
-                                                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula.
+                                                    At Pershing. I came into the Trading & Settlements team as the most senior developer regarding the dotNET framework. Initially, whilst being trained in business concepts around trading systems, I refactored a large behaviour driven testing framework based on the SpecFlow framework. To aid in this effort I introduced Inversion of Control / Dependency Injection concepts; by diving into the companies open-source software approval process and seeking approval for StructureMap and CommonServiceLocator. These tools allowed me to refactor the solution into isolated components and also reduce the amount of code in the solution by around 50%.
+                                                    I worked on a file monitoring application which moves and copies trade information from external clients. This is a multi-threaded application and after an environment change (service in a new location), network latency was causing threads to ever increase without being released causing eventual termination of the program. To remedy this I dug into the solution which was in VB.NET (which we converted to C# with an automated tool and verified by running the present unit tests). I performed a number of tests in various locations and concluded that the threading model used was not appropriate and so altered the thread creation and maintenance logic from using the ThreadPool to manual threads that are managed with custom timers. This increased the IO on the server slightly but was extremely resilient to latency issues as a result; which we stress tested by programmatically dumping thousands of files.
+                                                </p>
+                                                <p>
+                                                    Key Technologies & Concepts: .NET 4.5.1, C#, SQL 2008R2, SpecFlow, VB.NET, Multi-Threading, Garbage Collection, StructureMap, CommonServiceLocator, NUnit, TFS 2013, SonarQube, performance monitoring & tuning (dotTrace).
                                                 </p>
                                             </div>
                                         </div>
@@ -298,11 +298,19 @@
                                                 <p class="text-secondary"> / Manager / Senior Developer</p>
                                             </div>
                                         </div>
-                                        <div id="ex2" class="panel-collapse collapse in">
+                                        <div id="ex2" class="panel-collapse collapse out">
                                             <div class="panel-body text-grey">
                                                 <p>
-                                                    <!--TODO-->
-                                                    Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque.
+                                                    I oversaw the development of a prototype system which involved designing and fleshing out business requirements for an eventual live system alongside new modernised architecture for the team.
+                                                    During the early stages of the prototypes conception I performed business analysis tasks to identify the scope the requirements, from the use case documents provided.
+                                                    Once the analysis had been completed and the timelines established, I went on to architect the system. ASP.NET MVC in C# was used as the backend framework alongside Entity Framework 6 (ORM). The entire application was built using Inversion of Control principles (using Microsoft's Unity container to achieve this) so that we could easily test and build upon the code. The front-end of the system used HTML, CSS, JavaScript (in the form of JQuery, Kendo UI for complex Grids containing hierarchical data and multiple filters, TypeScript was used where OO JavaScript code which became required when writing client side calculations).
+                                                    The database was initially built by Entity Framework using a code first approach, however as the databases complexity grew we switched to database first and reverse-engineered the database in to SQL Project (which is an automated process). We removed Entity Framework at this point as with SQL Server 2005 it was not producing particularly efficient queries, we introduced T4 generated stored procedures instead and this provided the desired performance. As the solution was built using IoC throughout it was a relatively pain-less process to remove Entity Framework.
+                                                    Testing was done in a BDD manner using NUnit to write integration & unit tests that probed the behaviour and core functionality of the system. I.e. BDD was useful for testing end-to-end user processes, where-as unit tests were useful to test finer grained logic like calculations based on formulas.
+                                                    I was the lead developer on the project with two contactors working alongside me and a junior developer some of the time. I managed the development tasks and provided mentoring where we had differing skill-sets.
+                                                    This system was built as a showcase to replace a number of disparate systems throughout the bank which would help various departments work more efficiently and more uniformly.
+                                                </p>
+                                                <p>
+                                                    The technologies included were: .NET 4.0, ASP.NET MVC 4, C#, Entity Framework 6, SQL 2005/2008R2/2012, SQL Server 2012 Project, T4, JQuery, Kendo UI, Unity (IoC), HTML, CSS, Typescript, NUnit, SpecFlow
                                                 </p>
                                             </div>
                                         </div>
@@ -321,11 +329,15 @@
                                                 <p class="text-secondary"> / IT Consultant</p>
                                             </div>
                                         </div>
-                                        <div id="ex3" class="panel-collapse collapse in">
+                                        <div id="ex3" class="panel-collapse collapse out">
                                             <div class="panel-body text-grey">
                                                 <p>
-                                                    <!--TODO-->
-                                                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula.
+                                                    I worked on an existing solution to implement a number of new features as well as to improve the functionality and maintainability of the existing feature set. The system does not use a uniform set of technologies between applications and so an array of technologies/methodologies have been learnt as required during implementation.
+                                                    The core of the application cleansed various data sets i.e. address information and attempted to match this information to other types of data which allowed the council to keep track of various social services cases. The data-matching was done using fuzzy-logic some in C# and some in a black-box third party solution, which we fed information in and out of using WCF over a secure HTTPS connection. The application also provided advanced search functionality using Apache Lucene for .NET.
+                                                    <p>
+                                                        Key Project technologies included: C#, ASP.NET MVC (custom/2.0/3.0/4.0/5.0) / NHibernate/ SQL/ Castle Windsor, F#, JavaScript, JQuery, Google Closure, HTML, CSS.
+                                                    </p>
+
                                                 </p>
                                             </div>
                                         </div>
@@ -344,10 +356,10 @@
                                                 <p class="text-secondary"> / Student Medical Physicist</p>
                                             </div>
                                         </div>
-                                        <div id="ex4" class="panel-collapse collapse in">
+                                        <div id="ex4" class="panel-collapse collapse out-">
                                             <div class="panel-body text-grey">
                                                 <p>
-                                                    Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque.
+                                                    My main responsibilities included but were not limited to: Assisting in routine physics surveys of complex x-ray equipment at a number of client sites around the country, the analysis of patient radiation dose data from all of our clients to look for opportunities to optimise current protocols and to ensure legislative radiation dosages were met, maintenance of MS Access databases, creation of MS Excel spreadsheets to analyse large quantities of data and to filter out irrelevant information, creation of MATLAB codes to analyse various digital images.
                                                 </p>
                                             </div>
                                         </div>
@@ -357,10 +369,11 @@
                             <!-- education -->
                             <section class="panel-group resume margin-bottom" id="education">
                                 <h2>Education</h2>
-                                <br />
-                                <!-- ed1 -->
+                                <br/>
+
                                 <article class="resume-item">
-                                    <div class="resume-year"><small>2007 - 2011</small></div>
+                                    <div class="resume-year"><small>2015 - 2011</small>
+                                    </div>
                                     <div class="resume-btn">
                                         <a href="#ed1" data-toggle="collapse" data-parent="#education"></a>
                                     </div>
@@ -371,20 +384,61 @@
                                                 <p class="text-secondary"> / BSc - Physics with Nuclear Astrophysics</p>
                                             </div>
                                         </div>
-                                        <div id="ed1" class="panel-collapse collapse in">
-                                            <div class="panel-body text-grey">
-                                                <p>
-                                                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula.
-                                                </p>
+                                    </div>
+                                </article>
+
+                                <article class="resume-item">
+                                    <div class="resume-year"><small>2015 - 2015</small></div>
+                                    <div class="resume-btn">
+                                        <a href="#ed2" data-toggle="collapse" data-parent="#education"></a>
+                                    </div>
+                                    <div class="panel">
+                                        <div class="panel-heading">
+                                            <div class="panel-title">
+                                                <h4 class="resume-title">Massachusetts Institute of Technology / edX</h4>
+                                                <p class="text-secondary"> / 6.00.1x, Introduction to Computer Science and Programming Using Python</p>
                                             </div>
                                         </div>
                                     </div>
-                                </article><!-- ed1 -->
-                            </section><!--/ education -->
+                                </article>
 
+                                <article class="resume-item">
+                                    <div class="resume-year"><small>2015 - 2015</small>
+                                    </div>
+                                    <div class="resume-btn">
+                                        <a href="#ed3" data-toggle="collapse" data-parent="#education"></a>
+                                    </div>
+                                    <div class="panel">
+                                        <div class="panel-heading">
+                                            <div class="panel-title">
+                                                <h4 class="resume-title">Massachusetts Institute of Technology / edX</h4>
+                                                <p class="text-secondary"> / edX Certification - 6.00.2x: Introduction to Computational Thinking and Data Science</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="resume-item">
+                                    <div class="resume-year">
+                                        <small>2015 - 2015</small>
+                                    </div>
+                                    <div class="resume-btn">
+                                        <a href="#ed4" data-toggle="collapse" data-parent="#education"></a>
+                                    </div>
+                                    <div class="panel">
+                                        <div class="panel-heading">
+                                            <div class="panel-title">
+                                                <h4 class="resume-title">University of California, Berkeley / edX</h4>
+                                                <p class="text-secondary"> / edX Certification - BerkeleyX: CS188.1x Artificial Intelligence</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+
+                            </section><!--/ education -->
                         </div><!--/ padding -->
                         <footer class="visible-xs">
-                            <p class="text-center"><small>Tamesh Sivaguru&copy;2015 <span class="text-secondary">Web Developer</span></small></p>
+                            <p class="text-center"><small>Tamesh Sivaguru&copy;2015 <span class="text-secondary">Software Engineer</span></small></p>
                         </footer>
                     </div><!--/ col-9 -->
                 </section><!--/ wrapper section -->
